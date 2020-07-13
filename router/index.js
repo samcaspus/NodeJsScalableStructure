@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const Controller = require("../controller/home_controller")
 
-router.get("/",Controller.indexPage)
+const homePageController = require("../controller/homepage_controller");
+
+
+router.get("/", homePageController.getuserInformation);
+router.get("/sandeep", homePageController.clickLike);
 
 
 
